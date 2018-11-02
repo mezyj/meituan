@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <link rel="stylesheet" href="dist/css/swiper.css">
+
+</head>
+
+<body>
+    <div class="box">
+        <header>
+            <span>北京</span>
+            <div class="form">
+                <i class="iconfont icon-fangdajing"></i>
+                <input type="text" placeholder="输入商家">
+            </div>
+            <div class="wo">
+                <i class="iconfont icon-wode"></i>
+                <p>我的</p>
+            </div>
+
+        </header>
+        <section>
+            <div class="nav">
+                <img src="./img/banner.png" alt="">
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <ul>
+                            <li>
+                                <img src="./img/lbt.png" alt="">
+                                <p>美食</p>
+                            </li>
+                            <li>
+                                <img src="./img/lbt.png" alt="">
+                                <p>美食</p>
+                            </li>
+                            <li>
+                                <img src="./img/lbt.png" alt="">
+                                <p>美食</p>
+                            </li>
+                            <li>
+                                <img src="./img/lbt.png" alt="">
+                                <p>美食</p>
+                            </li>
+                            <li>
+                                <img src="./img/lbt.png" alt="">
+                                <p>美食</p>
+                            </li>
+                            <li>
+                                <img src="./img/lbt.png" alt="">
+                                <p>美食</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="swiper-slide">
+                        <ul>
+                            <li>
+                                <img src="./img/lbt.png" alt="">
+                                <p>周边游</p>
+                            </li>
+                            <li>
+                                <img src="./img/lbt.png" alt="">
+                                <p>周边游</p>
+                            </li>
+                            <li>
+                                <img src="./img/lbt.png" alt="">
+                                <p>周边游</p>
+                            </li>
+                            <li>
+                                <img src="./img/lbt.png" alt="">
+                                <p>周边游</p>
+                            </li>
+                            <li>
+                                <img src="./img/lbt.png" alt="">
+                                <p>周边游</p>
+                            </li>
+                            <li>
+                                <img src="./img/lbt.png" alt="">
+                                <p>周边游</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <footer></footer>
+    </div>
+</body>
+<script src="dist/js/swiper.js"></script>
+<script src="./jquery-3.1.1.min.js"></script>
+<script>
+    $(function() {
+        var myswiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: ".swiper-pagination"
+            }
+        })
+    })
+</script>
+
+</html>
