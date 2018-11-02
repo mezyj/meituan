@@ -12,6 +12,12 @@ img {
     width: 100%;
 }
 
+h2 {
+    height: pxTorem(45px);
+    line-height: pxTorem(45px);
+    // border-bottom: 1px solid #666;
+}
+
 header {
     width: 100%;
     height: pxTorem(45px);
@@ -42,6 +48,22 @@ header {
 section {
     overflow-y: auto;
     flex: 1;
+    .bs {
+        position: relative;
+    }
+    #ups,
+    #downs {
+        position: absolute;
+        left: 45%;
+        height: pxTorem(45px);
+        line-height: pxTorem(45px);
+    }
+    #ups {
+        top: pxTorem(-45px)
+    }
+    #downs {
+        bottom: pxTorem(-45px)
+    }
     .swiper-container {
         img {
             width: pxTorem(50px);
@@ -54,6 +76,36 @@ section {
             li {
                 width: 25%;
                 text-align: center;
+            }
+        }
+    }
+    .cons {
+        .list {
+            @include box_flex;
+            .left {
+                width: 25%;
+                img {
+                    width: 100%;
+                }
+            }
+            .right {
+                width: 70%;
+                padding-left: 5%;
+                p {
+                    font-size: pxTorem(14px);
+                }
+                .price {
+                    line-height: pxTorem(45px);
+                    @include box_flex;
+                    @include justify(space-between);
+                    span {
+                        color: #666;
+                        b {
+                            color: aqua;
+                            font-size: pxTorem(20px);
+                        }
+                    }
+                }
             }
         }
     }

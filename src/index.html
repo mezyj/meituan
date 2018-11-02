@@ -27,69 +27,86 @@
 
         </header>
         <section>
-            <div class="nav">
-                <img src="./img/banner.png" alt="">
-            </div>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <ul>
-                            <li>
-                                <img src="./img/lbt.png" alt="">
-                                <p>美食</p>
-                            </li>
-                            <li>
-                                <img src="./img/lbt.png" alt="">
-                                <p>美食</p>
-                            </li>
-                            <li>
-                                <img src="./img/lbt.png" alt="">
-                                <p>美食</p>
-                            </li>
-                            <li>
-                                <img src="./img/lbt.png" alt="">
-                                <p>美食</p>
-                            </li>
-                            <li>
-                                <img src="./img/lbt.png" alt="">
-                                <p>美食</p>
-                            </li>
-                            <li>
-                                <img src="./img/lbt.png" alt="">
-                                <p>美食</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="swiper-slide">
-                        <ul>
-                            <li>
-                                <img src="./img/lbt.png" alt="">
-                                <p>周边游</p>
-                            </li>
-                            <li>
-                                <img src="./img/lbt.png" alt="">
-                                <p>周边游</p>
-                            </li>
-                            <li>
-                                <img src="./img/lbt.png" alt="">
-                                <p>周边游</p>
-                            </li>
-                            <li>
-                                <img src="./img/lbt.png" alt="">
-                                <p>周边游</p>
-                            </li>
-                            <li>
-                                <img src="./img/lbt.png" alt="">
-                                <p>周边游</p>
-                            </li>
-                            <li>
-                                <img src="./img/lbt.png" alt="">
-                                <p>周边游</p>
-                            </li>
-                        </ul>
-                    </div>
+            <div class="bs">
+                <div id="ups">向上刷新</div>
+                <div class="nav">
+                    <img src="./img/banner.png" alt="">
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <ul>
+                                <li>
+                                    <img src="./img/lbt.png" alt="">
+                                    <p>美食</p>
+                                </li>
+                                <li>
+                                    <img src="./img/lbt.png" alt="">
+                                    <p>美食</p>
+                                </li>
+                                <li>
+                                    <img src="./img/lbt.png" alt="">
+                                    <p>美食</p>
+                                </li>
+                                <li>
+                                    <img src="./img/lbt.png" alt="">
+                                    <p>美食</p>
+                                </li>
+                                <li>
+                                    <img src="./img/lbt.png" alt="">
+                                    <p>美食</p>
+                                </li>
+                                <li>
+                                    <img src="./img/lbt.png" alt="">
+                                    <p>美食</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <ul>
+                                <li>
+                                    <img src="./img/lbt.png" alt="">
+                                    <p>周边游</p>
+                                </li>
+                                <li>
+                                    <img src="./img/lbt.png" alt="">
+                                    <p>周边游</p>
+                                </li>
+                                <li>
+                                    <img src="./img/lbt.png" alt="">
+                                    <p>周边游</p>
+                                </li>
+                                <li>
+                                    <img src="./img/lbt.png" alt="">
+                                    <p>周边游</p>
+                                </li>
+                                <li>
+                                    <img src="./img/lbt.png" alt="">
+                                    <p>周边游</p>
+                                </li>
+                                <li>
+                                    <img src="./img/lbt.png" alt="">
+                                    <p>周边游</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <h2>猜你喜欢</h2>
+                <div class="cons">
+                    <!-- <div class="list">
+                    <div class="left">
+                        <img src="./img/1.jpg" alt="">
+                    </div>
+                    <div class="right">
+                        <h2>全聚德</h2>
+                        <p>ghjk</p>
+                        <p class="price"> <span><b>233</b>门市价</span> <span>一生</span></p>
+                    </div>
+                </div> -->
+                </div>
+                <div id="downs">向下加载</div>
             </div>
         </section>
         <footer></footer>
@@ -97,13 +114,40 @@
 </body>
 <script src="dist/js/swiper.js"></script>
 <script src="./jquery-3.1.1.min.js"></script>
+<script src="./better-scroll.js"></script>
+<script src="./bs.js"></script>
 <script>
+    var myswiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: ".swiper-pagination"
+        }
+    })
     $(function() {
-        var myswiper = new Swiper('.swiper-container', {
-            pagination: {
-                el: ".swiper-pagination"
-            }
-        })
+        // var cons = document.querySelector('.cons');
+        // $.ajax({
+        //     url: '/api/list',
+        //     dataType: 'json',
+        //     success: function(res) {
+        //         var str = '';
+        //         if (res.code === 0) {
+        //             res.data.forEach(function(item) {
+        //                 str += `
+        //                 <div class="list">
+        //                 <div class="left">
+        //                     <img src="${item.src}" alt="">
+        //                 </div>
+        //                 <div class="right">
+        //                     <h2>${item.title}</h2>
+        //                     <p>${item.addr}</p>
+        //                     <p class="price"> <span><b>${item.price}</b>${item.men}</span> <span>${item.seng}</span></p>
+        //                 </div>
+        //             </div>
+        //                 `
+        //             })
+        //         }
+        //         cons.innerHTML = str;
+        //     }
+        // })
     })
 </script>
 
